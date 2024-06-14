@@ -8,13 +8,19 @@ Funcionalities of the system are:
 - Dispensing food on demand, by pressing the "feed" button.
 - Configuring the amount of food per portion, by changing the feeding wheel and then setting the currently used wheel in the user menu.
 
+<p align="center">
 <center><image src="Models/Pictures/front.jpg" height="400"></center>
+</p>
 
 The dispenser is a fully closed system and it doesn't need any app or internet connection to work, but it's advised to connect the RPi to the internet once at boot to get the time and date for correct working of the scheduler.<br>
 
 Whole system is written in C and it's GPIO functionality relies on [WiringPi](https://github.com/WiringPi/WiringPi) library. Just like the physical design, the code is also planned to be improved, especially the LCD handler as it's hard to read at times and some fragmentation is needed.<br>
 
-The dispenser is powered by a 5V 4A power supply and the motor is controlled by Cytron MDD3A driver via step-up converter that bumps up the voltage to 6V for the motor. The motor is a 6V LP with 75:1 gearbox with and encoder providing 0.67Nm of torque.<br>
+The dispenser is powered by a 5V 4A power supply and the motor is controlled by Cytron MDD3A driver which is powered via step-up converter that bumps up the voltage to 6V for the motor. The motor is a 6V LP with 75:1 gearbox with and encoder providing 0.67Nm of torque.<br>
+
+<p align="center">
+<image src="Models/Pictures/schematic.png" height="550"></center>
+</p>
 
 All other parts are 3D printed and the idea behind them is to be easily mountable and demountable to allow for easy cleaning.
 
